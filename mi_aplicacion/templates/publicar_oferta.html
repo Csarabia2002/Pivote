@@ -1,0 +1,16 @@
+<h1>Publicar oferta de trabajo</h1>
+
+{% if error %}
+<p style="color: red;">Error: Por favor, complete todos los campos.</p>
+{% endif %}
+
+<form method="post">
+  {% csrf_token %}
+  <label for="id_titulo">Título:</label>
+  {{ form.titulo }}
+  <br>
+  <label for="id_descripcion">Descripción:</label>
+  {{ form.descripcion }}
+  <br>
+  <button type="submit">Enviar</button>
+</form>

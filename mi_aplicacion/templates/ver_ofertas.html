@@ -1,0 +1,11 @@
+<h1>Ofertas de trabajo</h1>
+
+{% if ofertas %}
+<ul>
+  {% for oferta in ofertas %}
+  <li>{{ oferta.titulo }} - {{ oferta.descripcion }}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No hay ofertas de trabajo disponibles.</p>
+{% endif %}
